@@ -1,592 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Jim's Portfolio</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta name="description" content="Jim Jeffry's personal portfolio showcasing projects, resume, and skills as a Java Full Stack Developer.">
+<head>
+    <meta charset="utf-8">
+    <title>Jim Jeffry | Java Full Stack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Jim Jeffry, Java Full Stack Developer with expertise in Spring Boot, REST APIs, and modern web development.">
+    <meta name="keywords" content="Java Developer, Full Stack Developer, Spring Boot, REST APIs, MySQL, Portfolio">
+    <meta name="author" content="Jim Jeffry">
 
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <div class="wrapper">
-            <div class="sidebar">
-                <div class="sidebar-header">
-                    <img src="img/profile.jpeg" alt="Image">
+    <!-- Floating Code Particles -->
+    <div class="code-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Floating Cube -->
+    <div class="floating-cube">
+        <div class="cube">
+            <div class="face front">{J}</div>
+            <div class="face back">{J}</div>
+            <div class="face right">DEV</div>
+            <div class="face left">FULL</div>
+            <div class="face top">STACK</div>
+            <div class="face bottom">2024</div>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="profile-container">
+                <img src="img/profile.jpeg" alt="Jim Jeffry" class="profile-img">
+                <div class="profile-overlay">
+                    <div class="profile-text">Jim Jeffry</div>
                 </div>
-                <div class="sidebar-content">
-                    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">Navigation</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarCollapse">
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#header">Home<i class="fa fa-home"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about">About<i class="fa fa-address-card"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#experience">Experience<i class="fa fa-star"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#expertise">Expertise<i class="fa fa-tasks"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#portfolio">Portfolio<i class="fa fa-file-archive"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#contact">Contact<i class="fa fa-envelope"></i></a>
-                                </li>
+            </div>
+        </div>
+        <div class="sidebar-content">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#header"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"><i class="fas fa-user"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills"><i class="fas fa-code"></i> Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio"><i class="fas fa-folder-open"></i> Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-footer">
+            <a href="Jim_Jeffry_Java_Developer (6).pdf" download class="btn-download">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header id="header" class="header-section">
+            <div class="container">
+                <div class="header-content">
+                    <h4 class="subtitle animate__animated animate__fadeInUp">Hello, I'm</h4>
+                    <h1 class="title animate__animated animate__fadeInUp">Jim Jeffry</h1>
+                    <div class="typing-text animate__animated animate__fadeInUp">
+                        <span id="typed"></span>
+                    </div>
+                    <div class="header-buttons animate__animated animate__fadeInUp">
+                        <a href="#contact" class="btn btn-primary btn-hover-effect">
+                            <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                        <a href="#portfolio" class="btn btn-primary btn-hover-effect">
+                            <i class="fas fa-eye"></i> View Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about"><i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="header-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About <span>Me</span></h2>
+                    <div class="divider"></div>
+                    <p>Get to know me better</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="about-img">
+                            <img src="img/about.jpeg" alt="About Jim Jeffry" class="img-fluid">
+                            <div class="about-info">
+                                <div class="info-item">
+                                    <span>Name:</span>
+                                    <p>Jim Jeffry</p>
+                                </div>
+                                <div class="info-item">
+                                    <span>Email:</span>
+                                    <p><a href="mailto:jimjeffrymartin@gmail.com">jimjeffrymartin@gmail.com</a></p>
+                                </div>
+                                <div class="info-item">
+                                    <span>Phone:</span>
+                                    <p><a href="tel:+918940418471">+91 8940418471</a></p>
+                                </div>
+                                <div class="info-item">
+                                    <span>Location:</span>
+                                    <p>Chennai, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="about-content">
+                            <h3>Java Full Stack Developer</h3>
+                            <p class="lead">Passionate and results-driven Java Full Stack Developer with a solid foundation in web development, backend systems, and database management.</p>
+                            <p>I specialize in building robust applications using Java, Spring Boot, REST APIs, MySQL, and modern frontend technologies. Currently seeking opportunities to contribute to innovative software solutions that solve real-world problems.</p>
+                            <p>At Cape Comorin Media (CCM Tech Solutions), I lead a team of 5 as Social Media Manager and Project Organizer, successfully managing digital presence and tech solutions part-time.</p>
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <div class="terminal-buttons">
+                                        <span class="terminal-btn red"></span>
+                                        <span class="terminal-btn yellow"></span>
+                                        <span class="terminal-btn green"></span>
+                                    </div>
+                                    <div class="terminal-title">bash — 80×24</div>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">$ whoami</div>
+                                    <div class="terminal-line typing">Jim Jeffry - Java Full Stack Developer</div>
+                                    <div class="terminal-line">$ skills --show-all</div>
+                                    <div class="terminal-line typing">Java, Spring Boot, MySQL, REST APIs, HTML/CSS, JavaScript</div>
+                                    <div class="terminal-line">$ <span class="terminal-cursor">|</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Work <span>Experience</span></h2>
+                    <div class="divider"></div>
+                    <p>Professional Journey</p>
+                </div>
+                <div class="timeline" data-aos="fade-up">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jan 2023 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Tech Team Lead & Social Media Manager</h3>
+                            <h4>CAPE COMORIN MEDIA (CCM Tech Solutions) | Part-time</h4>
+                            <ul>
+                                <li>Leading a team of 5 members in delivering client projects</li>
+                                <li>Managing social media strategy and digital presence</li>
+                                <li>Developing responsive websites with HTML, CSS, JavaScript</li>
+                                <li>Handling end-to-end development and deployment</li>
                             </ul>
                         </div>
-                    </nav>
-                </div>
-               <div class="sidebar-footer">
-    <a href="https://www.instagram.com/mr_naive_kid/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://github.com/Jim-Jeffry" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/jim-jeffry" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-</div>
-
-            </div>
-            <div class="content">
-                <!-- Header Start -->
-                <div class="header" id="header">
-                    <div class="content-inner">
-                        <p>I'm</p>
-                        <h1>Jim Jeffry</h1>
-                        <h2></h2>
-                        <div class="typed-text">Web Developer, FullStack Developer, Apps Developer, Software Developer, Java Deve</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Apr 2025 - Jul 2025</div>
+                        <div class="timeline-content">
+                            <h3>Java Full Stack Intern</h3>
+                            <h4>Zidio | Remote</h4>
+                            <ul>
+                                <li>Built an Internship & Job Portal using Java, Spring Boot, MySQL</li>
+                                <li>Created user modules for registration, login, job listings</li>
+                                <li>Integrated RESTful APIs with frontend and performed validations</li>
+                                <li>Participated in Agile sprints and testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Aug 2024 - Jan 2025</div>
+                        <div class="timeline-content">
+                            <h3>Java Full Stack Trainee</h3>
+                            <h4>UNIQ Technologies | Chennai</h4>
+                            <ul>
+                                <li>Developed Smart Attendance Management System</li>
+                                <li>Implemented secure login and role-based access control</li>
+                                <li>Practiced Agile methodologies and API testing with Postman</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!-- Header End -->
-                
-                <!-- Large Button Start -->
-                <div class="large-btn">
-                <div class="content-inner">
-                    <a class="btn" href="img/Jim_Jeffry_Java_Developer.pdf" download>
-                     <i class="fa fa-download"></i>Resume
-                    </a>
-                    <a class="btn" href="#contact">
-                    <i class="fa fa-hands-helping"></i>Hire Me
-                    </a>
+            </div>
+        </section>
 
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical <span>Skills</span></h2>
+                    <div class="divider"></div>
+                    <p>My Expertise Areas</p>
                 </div>
-                </div>
-
-                <!-- Large Button End -->
-                
-                <!-- About Start -->
-                <div class="about" id="about">
-                    <div class="content-inner">
-                        <div class="content-header">
-                            <h2>About Me</h2>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-md-6 col-lg-5">
-                                <img src="img/about.jpeg" alt="Image">
-                            </div>
-                            <div class="col-md-6 col-lg-7">
-                                <p>
-                                    I'm Jim Jeffry, a passionate and self-motivated Java Full Stack Developer with a background in Mechanical Engineering and a strong interest in building real-world applications. I specialize in Java, Spring Boot, REST APIs, MySQL, and front-end technologies like HTML, CSS, and JavaScript.
-
-I’ve completed a Java Full Stack Internship at Zidio, where I worked on building an Internship & Job Portal, gaining hands-on experience in full-stack development. I’m also the Social Media Manager at Cape Comorin Media, combining creativity and strategy to manage digital presence across platforms like Instagram and YouTube.
-
-I'm always eager to learn, collaborate, and contribute to meaningful tech projects. My goal is to create impactful solutions that blend functionality, performance, and user experience.
-                                </p>
-                                <a class="btn" href="#">Hire Me</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="skills">
-                                    <div class="skill-name">
-                                        <p>Java</p><p>85%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>Spring Boot</p><p>50%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>REST APIs</p><p>70%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>MySQL</p><p>85%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>HTML</p><p>90%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>CSS</p><p>85%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="skill-category">
+                            <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>HTML/CSS</h4>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="skills">
-                                    <div class="skill-name">
-                                        <p>JavaScript</p><p>70%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>Front End Development</p><p>80%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>Back End Development</p><p>85%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>Git&GitHub</p><p>75%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>Automated Testing</p><p>70%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="skill-name">
-                                        <p>Debugging</p><p>75%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-database"></i> Database</h3>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>MySQL</h4>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- About End -->
-                
-                <!-- Education Start -->
-                <div class="education" id="education">
-                    <div class="content-inner">
-                        <div class="content-header">
-                            <h2>Education</h2>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <div class="edu-col">
-                                    <span>01-Jun-2020 <i>to</i> 25-Apr-2024</span>
-                                    <h3>Bachelor Degree</h3>
-                                    <p>Bachelor of Engineering in Mechanical Engineering</p>
-                                    <span>Noorul Islam Centre for Higher Education, Tamil Nadu</span>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="skill-category">
+                            <h3><i class="fas fa-server"></i> Backend</h3>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Java</h4>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="edu-col">
-                                    <span>01-Jun-2018 <i>to</i> 25-Apr-2020</span>
-                                    <h3>High School </h3>
-                                     <p>Computer Science</p>
-                                    <span>Joseph Matric Hr.sec School, Tamil Nadu</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Spring Boot</h4>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>REST APIs</h4>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- Education Start -->
-                
-                <!-- Experience Start -->
-                <div class="experience" id="experience">
-                    <div class="content-inner">
-                        <div class="content-header">
-                            <h2>Experience</h2>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <div class="exp-col">
-                                    <span>01-Aug-2024 <i>to</i> 28-Feb-2025</span>
-                                    <h3>Uniq Technologies</h3>
-                                    <h4>Chennai, TamilNadu</h4>
-                                    <h5>Java Full Stack Trainee</h5>
-                                    <p>Trained in Java, Spring Boot, MySQL, HTML, CSS, JavaScript, and REST APIs. Gained hands-on experience in full-stack development using Eclipse, Postman, and Git.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="exp-col">
-                                    <span>01-Apr-2025 <i>to</i> Present</span>
-                                    <h3>Zidio Solutions</h3>
-                                    <h4>Remote</h4>
-                                    <h5>Web Developer</h5>
-                                    <p>Working with backend services, frontend integration, and database
-logic.</p>
-                                </div>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-tools"></i> Tools & Concepts</h3>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Git/GitHub</span>
+                                <span class="skill-tag">Postman</span>
+                                <span class="skill-tag">Eclipse</span>
+                                <span class="skill-tag">VS Code</span>
+                                <span class="skill-tag">Maven</span>
+                                <span class="skill-tag">Agile</span>
+                                <span class="skill-tag">OOP</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Experience Start -->
-                <!-- Expertise Start -->
-<div class="expertise" id="expertise">
-    <div class="content-inner">
-        <div class="content-header">
-            <h2>Expertise</h2>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="srv-col">
-                    <i class="fa fa-code"></i>
-                    <h3>Java Full Stack Development</h3>
-                    <p>Proficient in Java, Spring Boot, and RESTful APIs to build scalable backend solutions integrated with dynamic frontends.</p>
+                <div class="radar-chart-container" data-aos="fade-up">
+                    <canvas id="skills-chart"></canvas>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="srv-col">
-                    <i class="fa fa-database"></i>
-                    <h3>Database Management</h3>
-                    <p>Skilled in MySQL for designing, querying, and maintaining relational databases in full stack applications.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="srv-col">
-                    <i class="fa fa-laptop-code"></i>
-                    <h3>Frontend Development</h3>
-                    <p>Experienced in building responsive and interactive user interfaces using HTML, CSS, and JavaScript.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="srv-col">
-                    <i class="fa fa-bug"></i>
-                    <h3>Debugging & Testing</h3>
-                    <p>Strong in identifying, debugging, and resolving issues across the stack with tools like Postman and automated testing methods.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="srv-col">
-                    <i class="fa fa-share-alt"></i>
-                    <h3>Social Media Management</h3>
-                    <p>Core member of Cape Comorin Media, handling Instagram & YouTube strategies and posting schedules.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="srv-col">
-                    <i class="fa fa-cogs"></i>
-                    <h3>Software Architecture</h3>
-                    <p>Hands-on experience designing cloud-based solutions using AWS tools during job simulations and internship projects.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Expertise End -->
+        </section>
 
-                
-               <!-- Portfolio Start -->
-<div class="portfolio" id="portfolio">
-    <div class="content-inner">
-        <div class="content-header">
-            <h2>Portfolio</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <ul id="portfolio-flters">
-                    <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".full-stack">Full Stack</li>
-                    <li data-filter=".cloud">Cloud</li>
-                    <li data-filter=".media">Media</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row portfolio-container">
-
-            <div class="col-lg-4 col-md-6 portfolio-item full-stack">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="img/Attendance (1).jpg" class="img-fluid" alt="">
-                        <a href="img/Attendance (1).jpg" data-lightbox="portfolio" data-title="Smart Attendance Management System" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                        <a href="https://github.com/Jim-Jeffry/Attendance_Management_JDBC" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                        <a class="portfolio-title" href="#">Smart Attendance <span>Full Stack</span></a>
-                    </figure>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section portfolio-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My <span>Portfolio</span></h2>
+                    <div class="divider"></div>
+                    <p>Featured Projects</p>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item full-stack">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="img/Job Portal.jpg" class="img-fluid" alt="">
-                        <a href="img/Job Portal.jpg" data-lightbox="portfolio" data-title="Zidio Internship Portal" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                        <a class="portfolio-title" href="#">Zidio Connect <span>Full Stack</span></a>
-                    </figure>
+                <div class="portfolio-filter" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="*">All</button>
+                    <button class="filter-btn" data-filter=".full-stack">Full Stack</button>
+                    <button class="filter-btn" data-filter=".frontend">Frontend</button>
+                    <button class="filter-btn" data-filter=".simulation">Simulations</button>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item full-stack">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="img/CITI.jpg" class="img-fluid" alt="">
-                        <a href="img/CITI.jpg" data-lightbox="portfolio" data-title="Citi ICG Virtual Job Simulation" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                        <a href="https://www.linkedin.com/posts/jim-jeffry_forage-certificate-activity-7307623579871821825-5WhT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOoJg8BAaZckS5S1ItAlGiNHSr9fb4IUsY" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                        <a class="portfolio-title" href="#">Citi ICG Job Sim <span>Simulation</span></a>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item cloud">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="img/AWS.png" class="img-fluid" alt="">
-                        <a href="img/AWS.png" data-lightbox="portfolio" data-title="AWS Hosting Architecture" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                        <a href="https://www.linkedin.com/posts/jim-jeffry_forage-certificate-activity-7314682726610059265-WKfm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOoJg8BAaZckS5S1ItAlGiNHSr9fb4IUsY" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                        <a class="portfolio-title" href="#">AWS Solution <span>Cloud Architecture</span></a>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item media">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="img/SocialMedia.jpg" class="img-fluid" alt="">
-                        <a href="img/SocialMedia.jpg" data-lightbox="portfolio" data-title="Cape Comorin Media" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                        <a href="https://www.instagram.com/capecomorinmedia/?hl=en" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                        <a class="portfolio-title" href="#">Cape Comorin Media <span>Social Media</span></a>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item full-stack">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="img/Portfolio.jpg" class="img-fluid" alt="">
-                        <a href="img/Portfolio.jpg" data-lightbox="portfolio" data-title="Personal Portfolio Website" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                        <a class="portfolio-title" href="#">Portfolio Website <span>Frontend</span></a>
-                    </figure>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Portfolio End -->
-                <!-- Review Start -->
-                <!-- <div class="review" id="review">
-                    <div class="content-inner">
-                        <div class="content-header">
-                            <h2>Review</h2>
-                        </div>
-                        <div class="row align-items-center review-slider">
-                            <div class="col-md-12">
-                                <div class="review-slider-item">
-                                    <div class="review-text">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci. Donec molestie velit id libero blandit, quis suscipit urna suscipit. Donec aliquet erat eu lacinia iaculis. Ut tempor tellus eu sem pharetra feugiat.
-                                        </p>
+                <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item full-stack" data-title="Smart Attendance System" data-tech="Java, Spring Boot, MySQL" data-preview="img/Attendance.jpg" data-link="https://github.com/Jim-Jeffry/Attendance_Management_JDBC">
+                        <div class="portfolio-wrapper">
+                            <img src="img/attendance_portal.webp" alt="Smart Attendance Management System">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>Smart Attendance System</h3>
+                                    <p>Java, Spring Boot, MySQL</p>
+                                    <div class="portfolio-links">
+                                        <a href="img/attendance_portal.webp" data-lightbox="portfolio" title="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="https://github.com/Jim-Jeffry/Attendance_Management_JDBC" target="_blank"><i class="fas fa-link"></i></a>
                                     </div>
-                                    <div class="review-img">
-                                        <img src="img/review-1.jpg" alt="Image">
-                                        <div class="review-name">
-                                            <h3>Client Name</h3>
-                                            <p>Profession</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item full-stack" data-title="Job Portal" data-tech="Java, Spring Boot, REST APIs" data-preview="img/Job-Portal.jpg" data-link="#">
+                        <div class="portfolio-wrapper">
+                            <img src="img/internship_portal.png" alt="Zidio Internship Portal">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>Job Portal</h3>
+                                    <p>Java, Spring Boot, REST APIs</p>
+                                    <div class="portfolio-links">
+                                        <a href="img/internship_portal.png" data-lightbox="portfolio" title="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item full-stack" data-title="UTS Ticket Booking" data-tech="Spring Boot, MySQL, JavaScript" data-preview="img/UTS.jpg" data-link="#">
+                        <div class="portfolio-wrapper">
+                            <img src="img/UTS.jpg" alt="UTS Ticket Booking System">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>UTS Ticket Booking</h3>
+                                    <p>Spring Boot, MySQL, JavaScript</p>
+                                    <div class="portfolio-links">
+                                        <a href="img/UTS.jpg" data-lightbox="portfolio" title="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item frontend" data-title="Portfolio Website" data-tech="HTML, CSS, JavaScript" data-preview="img/Portfolio.jpg" data-link="https://github.com/Jim-Jeffry">
+                        <div class="portfolio-wrapper">
+                            <img src="img/Portfolio.jpg" alt="Personal Portfolio Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>Portfolio Website</h3>
+                                    <p>HTML, CSS, JavaScript</p>
+                                    <div class="portfolio-links">
+                                        <a href="img/Portfolio.jpg" data-lightbox="portfolio" title="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="https://github.com/Jim-Jeffry" target="_blank"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item frontend" data-title="CCM Website" data-tech="HTML, CSS, JavaScript" data-preview="img/CCM.jpg" data-link="https://github.com/Jim-Jeffry">
+                        <div class="portfolio-wrapper">
+                            <img src="img/ccm Pvt.Ttd..png" alt="Cape Comorin Media Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>CCM Website</h3>
+                                    <p>HTML, CSS, JavaScript</p>
+                                    <div class="portfolio-links">
+                                        <a href="img/ccm Pvt.Ttd..png" data-lightbox="portfolio" title="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="https://github.com/Jim-Jeffry" target="_blank"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item simulation" data-title="Citi ICG Job Sim" data-tech="Software Development" data-preview="img/CITI.jpg" data-link="https://www.linkedin.com/posts/jim-jeffry_forage-certificate-activity-7307623579871821825-5WhT">
+                        <div class="portfolio-wrapper">
+                            <img src="img/CITI.jpg" alt="Citi ICG Virtual Job Simulation">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>Citi ICG Job Sim</h3>
+                                    <p>Software Development</p>
+                                    <div class="portfolio-links">
+                                        <a href="img/CITI.jpg" data-lightbox="portfolio" title="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="https://www.linkedin.com/posts/jim-jeffry_forage-certificate-activity-7307623579871821825-5WhT" target="_blank"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item simulation" data-title="AWS Architect" data-tech="Cloud Solutions" data-preview="img/AWS.png" data-link="https://www.linkedin.com/posts/jim-jeffry_forage-certificate-activity-7314682726610059265-WKfm">
+                        <div class="portfolio-wrapper">
+                            <img src="img/AWS.png" alt="AWS Solutions Architect">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>AWS Architect</h3>
+                                    <p>Cloud Solutions</p>
+                                    <div class="portfolio-links">
+                                        <a href="img/AWS.png" data-lightbox="portfolio" title="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="https://www.linkedin.com/posts/jim-jeffry_forage-certificate-activity-7314682726610059265-WKfm" target="_blank"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My <span>Education</span></h2>
+                    <div class="divider"></div>
+                    <p>Academic Background</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>B.E. Mechanical Engineering</h3>
+                            <h4>Noorul Islam Centre for Higher Education</h4>
+                            <p>2020 - 2024 | GPA: 7.9</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Higher Secondary</h3>
+                            <h4>St. Joseph's Matric Hr. Sec. School</h4>
+                            <p>Computer Science | 2020</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <h3>SSLC</h3>
+                            <h4>St. Joseph's Matric Hr. Sec. School</h4>
+                            <p>2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certifications" data-aos="fade-up">
+                    <h3 class="text-center mb-4">Certifications & Virtual Experiences</h3>
+                    <div class="certification-slider">
+                        <div class="certification-item">
+                            <div class="certification-card">
+                                <i class="fas fa-certificate"></i>
+                                <h4>Java Full Stack Development</h4>
+                                <p>UNIQ Technologies</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-card">
+                                <i class="fas fa-certificate"></i>
+                                <h4>AWS Solutions Architect</h4>
+                                <p>Forage Virtual Experience</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-card">
+                                <i class="fas fa-certificate"></i>
+                                <h4>Citi ICG Software Dev</h4>
+                                <p>Forage Job Simulation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In <span>Touch</span></h2>
+                    <div class="divider"></div>
+                    <p>Let's work together</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Name</h4>
+                                    <p>Jim Jeffry</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Designation</h4>
+                                    <p>Java Full Stack Developer</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:jimjeffrymartin@gmail.com">jimjeffrymartin@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+918940418471">+91 8940418471</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Location</h4>
+                                    <p>Chennai, Tamilnadu, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="contact-form">
+                            <form id="contactForm" action="https://formspree.io/f/mvgayvwz" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="review-slider-item">
-                                    <div class="review-text">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci. Donec molestie velit id libero blandit, quis suscipit urna suscipit. Donec aliquet erat eu lacinia iaculis. Ut tempor tellus eu sem pharetra feugiat.
-                                        </p>
-                                    </div>
-                                    <div class="review-img">
-                                        <img src="img/review-2.jpg" alt="Image">
-                                        <div class="review-name">
-                                            <h3>Client Name</h3>
-                                            <p>Profession</p>
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="review-slider-item">
-                                    <div class="review-text">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci. Donec molestie velit id libero blandit, quis suscipit urna suscipit. Donec aliquet erat eu lacinia iaculis. Ut tempor tellus eu sem pharetra feugiat.
-                                        </p>
-                                    </div>
-                                    <div class="review-img">
-                                        <img src="img/review-3.jpg" alt="Image">
-                                        <div class="review-name">
-                                            <h3>Client Name</h3>
-                                            <p>Profession</p>
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
                                 </div>
-                            </div>
+                                <div class="form-submit">
+                                    <button type="submit" class="btn btn-primary btn-hover-effect">Send Message</button>
+                                    <div id="form-message" class="mt-3"></div>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                </div> -->
-                <!-- Review End --> 
-                
-<!-- Contact Start -->
-<div class="contact" id="contact">
-    <div class="content-inner">
-        <div class="content-header">
-            <h2>Contact</h2>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <p><i class="fa fa-user"></i>Jim Jeffry</p>
-                    <p><i class="fa fa-tag"></i>Java Full Stack Developer</p>
-                  <p><i class="fa fa-envelope"></i> 
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jimjeffrymartin@gmail.com" target="_blank">
-    jimjeffrymartin@gmail.com
-  </a>
-</p>
-                    <p><i class="fa fa-phone"></i><a href="tel:+918940418471">+91 8940418471</a></p>
-                    <p><i class="fa fa-map-marker"></i>Chennai, Tamilnadu, India</p>
-                    <div class="social">
-                        <a class="btn" href="https://www.linkedin.com/in/jim-jeffry/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn" href="https://www.instagram.com/mr_naive_kid/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form">
-                    <form action="https://formspree.io/f/mvgayvwz" method="POST" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required />
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="email" name="email" class="form-control" placeholder="Your Email" required />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" required />
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div>
-                            <button class="btn" type="submit">Send Message</button>
-                        </div>
-                        <p id="success-message" style="display:none; color: green; margin-top: 15px;">Message sent successfully!</p>
-                    </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span>J</span>im <span>J</span>effry
+                    </div>
+                    <div class="footer-links">
+                        <a href="#header">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://github.com/Jim-Jeffry" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jim-jeffry" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/mr_naive_kid/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:jimjeffrymartin@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; <span id="year"></span> Jim Jeffry. All Rights Reserved.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
-</div>
-<!-- Contact End -->
 
-<!-- JavaScript for Form Handling -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const successMsg = document.getElementById("success-message");
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch(form.action, {
-                method: "POST",
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            });
-
-            if (response.ok) {
-                form.reset(); // Clear form fields
-                successMsg.style.display = "block"; // Show success message
-
-                // Optional: hide message after a few seconds
-                setTimeout(() => {
-                    successMsg.style.display = "none";
-                }, 4000);
-            } else {
-                alert("There was a problem submitting the form.");
-            }
-        } catch (error) {
-            alert("Something went wrong. Please try again later.");
-        }
-    });
-});
-</script>
-
-
-
-                <!-- Contact End -->
-                
-                <!-- Footer Start -->
-                <div class="footer">
-    <div class="content-inner">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <p>&copy; 2025 <strong>Jim Jeffry</strong>. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-md-end text-center">
-                <p>Powered by <strong>Jim's Portfolio</strong></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-                <!-- Footer Start -->
-            </div>
-        </div>
-        
-        <!-- Back to Top -->
-        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
 </html>
